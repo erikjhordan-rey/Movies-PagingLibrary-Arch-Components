@@ -36,9 +36,7 @@ I do like the library but It is not time to use it in production as it does not 
 
 # Demo
 
-<img src="https://user-images.githubusercontent.com/5893477/39963467-36e02f3e-5631-11e8-8c0a-37739485c7d4.png" width="260">
-
-<img src="./art/movies_.gif" width="260">
+|<img src="https://user-images.githubusercontent.com/5893477/39963467-36e02f3e-5631-11e8-8c0a-37739485c7d4.png" width="260"> |<img src="./art/movies_.gif" width="260"> |
 
 ### Resources to start with Paging Library on Android
 
