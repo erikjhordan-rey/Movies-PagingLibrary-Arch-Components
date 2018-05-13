@@ -32,7 +32,7 @@ Sample created to practice **Paging Library**.
  * It's alpha so I won't use it in production in a near future
  * Could save a lot of time handling the logic to retrieve data although be forced to use pager library elements like `PagedList` & `PagedListAdapter`
  
-I do like the library but It is not time to use it in production as it does not fit with the architecture we have today.
+I do like the library but I think it's not time to use it in production as it does not fit with the architecture that I'm using in my current project.
 
 # Demo
 
