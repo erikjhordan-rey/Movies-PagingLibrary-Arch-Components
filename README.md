@@ -26,15 +26,13 @@ Sample created to practice **Paging Library**.
 
 ## What was wrong?
  
- * I get stranger behaviors with LinearLayoutManager & GridLayoutManager
- * `onItemAtEndLoaded` is called when the ui is not visible so I'm not scrolling on the end the list.
- * Complicated to handle errors (it implies use LiveData observables in DataLayer to be used in other layers, I prefer keep working with RX and LiveData on UI layer.)
- * Limited API to work on Rx architectures.
- * I think there should be a reactive version of `PagedList.BoundaryCallback<Movie>()`
+ * I get stranger behaviors with LinearLayoutManager & GridLayoutManager  `onItemAtEndLoaded` is called when I'm not scrolling    to the end of list.
+ * Handle errors, implies use LiveData observables in DataLayer but I prefer keep working with RX and LiveData only for UI layer.
+ * Limited API to work on Rx architectures, I think there should be a reactive version of `PagedList.BoundaryCallback<Movie>()`
  * It's alpha so I won't use it in production in a near future
- * Could save a lot of time to handle the logic of retrieve items but the architecture will be forced to use all the elements of pager library like `PagedList` & `PagedListAdapter`
+ * Could save a lot of time handling the logic to retrieve data although be forced to use pager library elements like `PagedList` & `PagedListAdapter`
  
-I like the library but there are stuffs to fix it before to start to use it production.
+I do like the library but It is not time to use it in production as it does not fit with the architecture we have today.
 
 # Demo
 
