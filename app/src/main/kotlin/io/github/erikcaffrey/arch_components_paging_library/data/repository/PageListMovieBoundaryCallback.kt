@@ -34,7 +34,7 @@ class PageListMovieBoundaryCallback(private val moviesRemoteDataSource: MoviesRe
                     if (listMovie.isNotEmpty()) {
                         moviesRoomDataSource.storeMovies(listMovie)
                         Log.i(TAG, "Inserted: ${listMovie.size}")
-                    }else {
+                    } else {
                         Log.i(TAG, "No Inserted")
                     }
                     requestedPage++
@@ -42,7 +42,7 @@ class PageListMovieBoundaryCallback(private val moviesRemoteDataSource: MoviesRe
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .toCompletable()
-                .doFinally{ isRequestRunning = false }
+                .doFinally { isRequestRunning = false }
                 .subscribe({ Log.i(TAG, "Movies Completed") }, { it.printStackTrace() })
 
     }
