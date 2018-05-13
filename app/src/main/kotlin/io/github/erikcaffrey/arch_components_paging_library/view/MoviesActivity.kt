@@ -3,6 +3,7 @@ package io.github.erikcaffrey.arch_components_paging_library.view
 import android.arch.lifecycle.Observer
 import android.arch.paging.PagedList
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.util.Log
@@ -38,7 +39,7 @@ class MoviesActivity : AppCompatActivity() {
     private fun initAdapter() {
         movies_recycler.adapter = moviePagedListAdapter
         moviesViewModel.pagedListMovie.observe(this, Observer<PagedList<Movie>> {
-            Log.d(MoviesActivity::class::java.name, "Movie List Size: ${it?.size}")
+            Log.d(MoviesActivity::class::java.name, "Movies: ${it?.size}")
             moviePagedListAdapter.submitList(it)
         })
     }

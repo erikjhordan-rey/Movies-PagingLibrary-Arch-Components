@@ -15,9 +15,9 @@ class MoviesPagedListAdapter : PagedListAdapter<Movie, MoviesViewHolder>(movieDi
     }
 
     override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
-        val article = getItem(position)
-        if (article != null) {
-            holder.render(article)
+        val movie = getItem(position)
+        if (movie != null) {
+            holder.render(movie)
         } else {
             holder.clear()
         }
@@ -26,7 +26,7 @@ class MoviesPagedListAdapter : PagedListAdapter<Movie, MoviesViewHolder>(movieDi
     companion object {
         private val movieDiffCallback = object : DiffUtil.ItemCallback<Movie>() {
             override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
-                return oldItem.title == newItem.title
+                return oldItem.id == newItem.id
             }
 
             override fun areContentsTheSame(oldItem: Movie, newItem: Movie): Boolean {
