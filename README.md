@@ -1,6 +1,6 @@
  # Paging Library - Architecture Components
 
-I decided start to play with Paging Library & RX the new feature supported, this sample was created to practice how **Paging Library** works with **RxJava**.
+Sample created to practice **Paging Library**.
 
 ## What Have I learned?
 
