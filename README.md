@@ -1,41 +1,40 @@
  # Paging Library - Architecture Components
 
-As you know some last year Architecture Components was released like a guideline to help to build better architecture for android applications 
-so I decided start to play with Paging Library & RX the new feature supported on it, this sample was created to practice how *Paging Library* with *Rx* works.
+I decided start to play with Paging Library & RX the new feature supported, this sample was created to practice how *Paging Library* works with *RxJava*.
 
 ## What Have I learned?
 
-### Paging Library (:+1)
+* **Paging Library**
  
 The Paging Library makes it easier for you to load data on demand within your app's RecyclerView.
   
-### PagedList 
+* **PagedList**
 Collection that loads data in pages, asynchronously. A PagedList can be used to load data from sources you define, and present it easily in your UI with a RecyclerView.
     
-### DataSource and DataSource.Factory  
+* **DataSource and DataSource.Factory**  
 DataSource is the base class for loading snapshots of data into a PagedList. A DataSource.Factory is used to create a DataSource.
 
-### PageKeyedDataSource 
+* **PageKeyedDataSource** 
 
 DataSource used to load embed next/previous keys.
 
-### ItemKeyedDataSource
+* **ItemKeyedDataSource**
 
 DataSource used to retrieve data from item N to fetch item N+1
 
-### PositionalDataSource 
+* **PositionalDataSource**
 if you need to fetch pages of data from any location you choose.
 
-### LivePagedListBuilder 
+* **LivePagedListBuilder** 
 Class used to build a LiveData<PagedList> based on DataSource.Factory and a PagedList.Config.
   
-### RxPagedListBuilder
+* **RxPagedListBuilder**
 Class used to build a Observable<PagedList> based on DataSource.Factory and a PagedList.Config.
   
-### BoundaryCallback 
+* **BoundaryCallback** 
 Helper callback to signals when a PagedList has reached the end of available data.
     
-### PagedListAdapter
+* **PagedListAdapter**
 RecyclerView.Adapter that presents paged data from PagedLists in a RecyclerView. PagedListAdapter listens to PagedList loading callbacks as pages are loaded, and uses DiffUtil to compute fine grained updates as new PagedLists are received.
 
 
