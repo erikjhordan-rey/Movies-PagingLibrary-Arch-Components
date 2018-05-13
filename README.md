@@ -38,7 +38,7 @@ I like the library but there are stuffs to fix it before to start to use it prod
 
 # Demo
 
-<img src="./art/device-2018-05-12-205800.gif" width="260">
+<img src="https://user-images.githubusercontent.com/5893477/39963467-36e02f3e-5631-11e8-8c0a-37739485c7d4.png" width="260">
 
 
 
