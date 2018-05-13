@@ -7,5 +7,5 @@ object DATABASE {
 
     const val SELECT_MOVIE = "SELECT * FROM $TABLE_MOVIE ORDER BY popularity DESC, title ASC"
 
-    const val PAGE_SIZE = 15
+    const val PAGE_SIZE = 20
 }
