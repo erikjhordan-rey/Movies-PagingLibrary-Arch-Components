@@ -9,25 +9,29 @@ import androidx.recyclerview.widget.GridLayoutManager
 import io.github.erikcaffrey.arch_components_paging_library.R
 import io.github.erikcaffrey.arch_components_paging_library.data.room.Movie
 import io.github.erikcaffrey.arch_components_paging_library.di.Injection
+import io.github.erikcaffrey.arch_components_paging_library.view.decorator.MarginDecoration
 import io.github.erikcaffrey.arch_components_paging_library.viewmodel.MoviesViewModel
 import kotlinx.android.synthetic.main.activity_movies.movies_recycler
 
 class MoviesActivity : AppCompatActivity() {
 
     private lateinit var moviesViewModel: MoviesViewModel
-    private val moviePagedListAdapter = MoviesPagedListAdapter()
+    private val moviePagedListAdapter by lazy { MoviesPagedListAdapter() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movies)
         initRecycler()
         initViewModel()
-        initAdapter()
+        initObserver()
     }
 
     private fun initRecycler() {
-        val linearLayoutManager = GridLayoutManager(this, 2)
-        movies_recycler.layoutManager = linearLayoutManager
+        movies_recycler.apply {
+            layoutManager = GridLayoutManager(this@MoviesActivity, 2)
+            addItemDecoration(MarginDecoration(this@MoviesActivity))
+            adapter = moviePagedListAdapter
+        }
     }
 
     private fun initViewModel() {
@@ -35,8 +39,7 @@ class MoviesActivity : AppCompatActivity() {
         moviesViewModel.getMovies()
     }
 
-    private fun initAdapter() {
-        movies_recycler.adapter = moviePagedListAdapter
+    private fun initObserver() {
         moviesViewModel.pagedListMovie.observe(this, Observer<PagedList<Movie>> {
             Log.d(MoviesActivity::class::java.name, "Movies: ${it?.size}")
             moviePagedListAdapter.submitList(it)

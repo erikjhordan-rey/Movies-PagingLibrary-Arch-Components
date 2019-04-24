@@ -12,7 +12,7 @@ data class MovieApi(@SerializedName("id") val id: Int,
                     @SerializedName("overview") val overview: String)
 
 fun MovieApi.toMovieEntity() =
-        this.run { Movie(id.toLong(), title, popularity, getVoteAverage(voteAverage), getPosterURL(posterPath), overview) }
+        Movie(id.toLong(), title, popularity, getVoteAverage(voteAverage), getPosterURL(posterPath), overview)
 
 private fun getVoteAverage(voteAverage: Int) = voteAverage * 10
 

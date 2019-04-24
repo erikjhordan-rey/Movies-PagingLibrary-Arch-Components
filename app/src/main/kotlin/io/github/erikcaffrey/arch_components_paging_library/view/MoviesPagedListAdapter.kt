@@ -16,11 +16,7 @@ class MoviesPagedListAdapter : PagedListAdapter<Movie, MoviesViewHolder>(movieDi
 
     override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
         val movie = getItem(position)
-        if (movie != null) {
-            holder.render(movie)
-        } else {
-            holder.clear()
-        }
+        if (movie != null) holder.render(movie) else holder.clear()
     }
 
     companion object {

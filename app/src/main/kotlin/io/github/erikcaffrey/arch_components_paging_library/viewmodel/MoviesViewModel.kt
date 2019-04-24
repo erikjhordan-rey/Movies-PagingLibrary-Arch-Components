@@ -14,7 +14,7 @@ class MoviesViewModel(private val moviesRepository: MoviesRepository) : ViewMode
 
     fun getMovies() {
         compositeDisposable.add(moviesRepository.fetchOrGetMovies()
-                .subscribe({ pagedListMovie.value = it }, { it.printStackTrace() }))
+                .subscribe({ pagedListMovie.value = it}, { it.printStackTrace() }))
     }
 
     override fun onCleared() {
