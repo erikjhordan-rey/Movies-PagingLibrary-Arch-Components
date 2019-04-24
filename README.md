@@ -24,16 +24,6 @@ Sample created to practice **Paging Library**.
     
 * **PagedListAdapter:** RecyclerView.Adapter that presents paged data from PagedLists in a RecyclerView. PagedListAdapter listens to PagedList loading callbacks as pages are loaded, and uses DiffUtil to compute fine grained updates as new PagedLists are received.
 
-## What was wrong?
- 
- * I get stranger behaviors with LinearLayoutManager & GridLayoutManager  `onItemAtEndLoaded` is called when I'm not scrolling    to the end of list.
- * Handle errors, implies use LiveData observables in DataLayer but I prefer keep working with RX and LiveData only for UI layer.
- * Limited API to work on Rx architectures, I think there should be a reactive version of `PagedList.BoundaryCallback<Movie>()`
- * It's alpha so I won't use it in production in a near future
- * Could save a lot of time handling the logic to retrieve data although be forced to use pager library elements like `PagedList` & `PagedListAdapter`
- 
-I do like the library but I think it's not time to use it in production as it does not fit with the architecture that I'm using in my current project.
-
 # Demo
 
 |<img src="https://user-images.githubusercontent.com/5893477/39963467-36e02f3e-5631-11e8-8c0a-37739485c7d4.png" width="260"> |<img src="./art/movies_.gif" width="260"> |
