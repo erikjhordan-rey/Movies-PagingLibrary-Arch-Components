@@ -1,7 +1,7 @@
 package io.github.erikcaffrey.arch_components_paging_library.data.repository
 
-import android.arch.paging.PagedList
 import android.util.Log
+import androidx.paging.PagedList
 import io.github.erikcaffrey.arch_components_paging_library.data.remote.MoviesRemoteDataSource
 import io.github.erikcaffrey.arch_components_paging_library.data.remote.toMovieEntity
 import io.github.erikcaffrey.arch_components_paging_library.data.room.Movie
@@ -28,7 +28,7 @@ class PageListMovieBoundaryCallback(private val moviesRemoteDataSource: MoviesRe
         if (isRequestRunning) return
 
         isRequestRunning = true
-        moviesRemoteDataSource.fetchMovies(requestedPage)
+       val disposable = moviesRemoteDataSource.fetchMovies(requestedPage)
                 .map { movieApiList -> movieApiList.map { it.toMovieEntity() } }
                 .doOnSuccess { listMovie ->
                     if (listMovie.isNotEmpty()) {
@@ -41,7 +41,7 @@ class PageListMovieBoundaryCallback(private val moviesRemoteDataSource: MoviesRe
                 }
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
-                .toCompletable()
+                .ignoreElement()
                 .doFinally { isRequestRunning = false }
                 .subscribe({ Log.i(TAG, "Movies Completed") }, { it.printStackTrace() })
 

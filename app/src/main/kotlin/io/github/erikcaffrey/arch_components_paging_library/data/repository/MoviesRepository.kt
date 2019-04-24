@@ -1,7 +1,7 @@
 package io.github.erikcaffrey.arch_components_paging_library.data.repository
 
-import android.arch.paging.PagedList
-import android.arch.paging.RxPagedListBuilder
+import androidx.paging.PagedList
+import androidx.paging.RxPagedListBuilder
 import io.github.erikcaffrey.arch_components_paging_library.data.remote.MoviesRemoteDataSource
 import io.github.erikcaffrey.arch_components_paging_library.data.room.DATABASE.PAGE_SIZE
 import io.github.erikcaffrey.arch_components_paging_library.data.room.Movie

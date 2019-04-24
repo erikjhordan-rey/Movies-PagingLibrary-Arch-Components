@@ -1,7 +1,7 @@
 package io.github.erikcaffrey.arch_components_paging_library.data.room
 
-import android.arch.persistence.room.Entity
-import android.arch.persistence.room.PrimaryKey
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import io.github.erikcaffrey.arch_components_paging_library.data.room.DATABASE.TABLE_MOVIE
 
 @Entity(tableName = TABLE_MOVIE)

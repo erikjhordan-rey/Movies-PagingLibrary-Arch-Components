@@ -1,8 +1,8 @@
 package io.github.erikcaffrey.arch_components_paging_library.viewmodel
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
-import android.arch.paging.PagedList
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.paging.PagedList
 import io.github.erikcaffrey.arch_components_paging_library.data.repository.MoviesRepository
 import io.github.erikcaffrey.arch_components_paging_library.data.room.Movie
 import io.reactivex.disposables.CompositeDisposable

@@ -1,17 +1,16 @@
 package io.github.erikcaffrey.arch_components_paging_library.view
 
-import android.arch.lifecycle.Observer
-import android.arch.paging.PagedList
+import androidx.lifecycle.Observer
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.GridLayoutManager
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+import androidx.paging.PagedList
+import androidx.recyclerview.widget.GridLayoutManager
 import io.github.erikcaffrey.arch_components_paging_library.R
 import io.github.erikcaffrey.arch_components_paging_library.data.room.Movie
 import io.github.erikcaffrey.arch_components_paging_library.di.Injection
 import io.github.erikcaffrey.arch_components_paging_library.viewmodel.MoviesViewModel
-import kotlinx.android.synthetic.main.activity_movies.*
+import kotlinx.android.synthetic.main.activity_movies.movies_recycler
 
 class MoviesActivity : AppCompatActivity() {
 
