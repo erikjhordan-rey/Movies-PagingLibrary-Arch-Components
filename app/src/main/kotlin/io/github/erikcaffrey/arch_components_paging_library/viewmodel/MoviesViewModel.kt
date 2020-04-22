@@ -1,5 +1,6 @@
 package io.github.erikcaffrey.arch_components_paging_library.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.paging.PagedList
@@ -10,11 +11,11 @@ import io.reactivex.disposables.CompositeDisposable
 class MoviesViewModel(private val moviesRepository: MoviesRepository) : ViewModel() {
 
     private val compositeDisposable = CompositeDisposable()
-    var pagedListMovie = MutableLiveData<PagedList<Movie>>()
+    private val _pagedListMovie = MutableLiveData<PagedList<Movie>>()
+    var pagedListMovie = _pagedListMovie
 
     fun getMovies() {
-        compositeDisposable.add(moviesRepository.fetchOrGetMovies()
-                .subscribe({ pagedListMovie.value = it}, { it.printStackTrace() }))
+        compositeDisposable.add(moviesRepository.fetchOrGetMovies().subscribe({ _pagedListMovie.value = it }, { it.printStackTrace() }))
     }
 
     override fun onCleared() {

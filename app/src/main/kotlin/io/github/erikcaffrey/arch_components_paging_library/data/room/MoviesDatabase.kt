@@ -21,6 +21,7 @@ abstract class MoviesDatabase : RoomDatabase() {
             INSTANCE ?: buildMoviesDatabase(context).also { INSTANCE = it }
         }
 
-        private fun buildMoviesDatabase(context: Context) = Room.databaseBuilder(context, MoviesDatabase::class.java, DATABASE_MOVIE).build()
+        private fun buildMoviesDatabase(context: Context) =
+                Room.databaseBuilder(context, MoviesDatabase::class.java, DATABASE_MOVIE).build()
     }
 }
