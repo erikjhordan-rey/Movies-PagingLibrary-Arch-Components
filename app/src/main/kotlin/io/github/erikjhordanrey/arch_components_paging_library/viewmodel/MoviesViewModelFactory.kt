@@ -1,8 +1,8 @@
-package io.github.erikcaffrey.arch_components_paging_library.viewmodel
+package io.github.erikjhordanrey.arch_components_paging_library.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import io.github.erikcaffrey.arch_components_paging_library.data.repository.MoviesRepository
+import io.github.erikjhordanrey.arch_components_paging_library.data.repository.MoviesRepository
 
 class MoviesViewModelFactory(private val moviesRepository: MoviesRepository) : ViewModelProvider.Factory {
 

@@ -1,8 +1,8 @@
-package io.github.erikcaffrey.arch_components_paging_library.data.remote
+package io.github.erikjhordanrey.arch_components_paging_library.data.remote
 
 import com.google.gson.annotations.SerializedName
-import io.github.erikcaffrey.arch_components_paging_library.data.remote.Api.IMAGES_URL
-import io.github.erikcaffrey.arch_components_paging_library.data.room.Movie
+import io.github.erikjhordanrey.arch_components_paging_library.data.remote.Api.IMAGES_URL
+import io.github.erikjhordanrey.arch_components_paging_library.data.room.Movie
 
 data class MovieApi(@SerializedName("id") val id: Int,
                     @SerializedName("title") val title: String,

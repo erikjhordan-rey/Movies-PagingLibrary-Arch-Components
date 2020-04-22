@@ -1,14 +1,12 @@
-package io.github.erikcaffrey.arch_components_paging_library.view
+package io.github.erikjhordanrey.arch_components_paging_library.view
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.GridLayoutManager
-import io.github.erikcaffrey.arch_components_paging_library.R
-import io.github.erikcaffrey.arch_components_paging_library.di.provideMoviesViewModel
-import io.github.erikcaffrey.arch_components_paging_library.view.decorator.MarginDecoration
-import io.github.erikcaffrey.arch_components_paging_library.viewmodel.MoviesViewModel
+import io.github.erikjhordanrey.arch_components_paging_library.R
+import io.github.erikjhordanrey.arch_components_paging_library.di.provideMoviesViewModel
+import io.github.erikjhordanrey.arch_components_paging_library.view.decorator.MarginDecoration
+import io.github.erikjhordanrey.arch_components_paging_library.viewmodel.MoviesViewModel
 import kotlinx.android.synthetic.main.activity_movies.movies_recycler
 
 class MoviesActivity : AppCompatActivity() {

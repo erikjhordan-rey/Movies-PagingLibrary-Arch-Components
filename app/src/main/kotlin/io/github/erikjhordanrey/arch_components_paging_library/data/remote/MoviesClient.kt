@@ -1,9 +1,9 @@
-package io.github.erikcaffrey.arch_components_paging_library.data.remote
+package io.github.erikjhordanrey.arch_components_paging_library.data.remote
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
-import io.github.erikcaffrey.arch_components_paging_library.data.remote.Api.THE_MOVIE_URL
+import io.github.erikjhordanrey.arch_components_paging_library.data.remote.Api.THE_MOVIE_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

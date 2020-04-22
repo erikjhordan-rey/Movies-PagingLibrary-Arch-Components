@@ -1,11 +1,11 @@
-package io.github.erikcaffrey.arch_components_paging_library.data.room
+package io.github.erikjhordanrey.arch_components_paging_library.data.room
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import io.github.erikcaffrey.arch_components_paging_library.data.room.DATABASE.DATABASE_MOVIE
-import io.github.erikcaffrey.arch_components_paging_library.data.room.DATABASE.DATABASE_MOVIE_VERSION
+import io.github.erikjhordanrey.arch_components_paging_library.data.room.DATABASE.DATABASE_MOVIE
+import io.github.erikjhordanrey.arch_components_paging_library.data.room.DATABASE.DATABASE_MOVIE_VERSION
 
 @Database(entities = [Movie::class], version = DATABASE_MOVIE_VERSION, exportSchema = false)
 abstract class MoviesDatabase : RoomDatabase() {

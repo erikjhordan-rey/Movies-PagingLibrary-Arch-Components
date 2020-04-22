@@ -1,8 +1,8 @@
-package io.github.erikcaffrey.arch_components_paging_library.data.room
+package io.github.erikjhordanrey.arch_components_paging_library.data.room
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import io.github.erikcaffrey.arch_components_paging_library.data.room.DATABASE.TABLE_MOVIE
+import io.github.erikjhordanrey.arch_components_paging_library.data.room.DATABASE.TABLE_MOVIE
 
 @Entity(tableName = TABLE_MOVIE)
 data class Movie(@PrimaryKey val id: Long,

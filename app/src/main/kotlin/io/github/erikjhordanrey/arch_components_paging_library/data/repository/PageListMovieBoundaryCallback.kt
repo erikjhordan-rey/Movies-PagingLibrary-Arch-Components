@@ -1,11 +1,12 @@
-package io.github.erikcaffrey.arch_components_paging_library.data.repository
+package io.github.erikjhordanrey.arch_components_paging_library.data.repository
 
 import android.util.Log
 import androidx.paging.PagedList
-import io.github.erikcaffrey.arch_components_paging_library.data.remote.MoviesRemoteDataSource
-import io.github.erikcaffrey.arch_components_paging_library.data.remote.toMovieEntity
-import io.github.erikcaffrey.arch_components_paging_library.data.room.Movie
-import io.github.erikcaffrey.arch_components_paging_library.data.room.MoviesRoomDataSource
+import io.github.erikjhordanrey.arch_components_paging_library.data.remote.MoviesRemoteDataSource
+import io.github.erikjhordanrey.arch_components_paging_library.data.remote.toMovieEntity
+import io.github.erikjhordanrey.arch_components_paging_library.data.room.Movie
+import io.github.erikjhordanrey.arch_components_paging_library.data.room.MoviesRoomDataSource
+import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
 class PageListMovieBoundaryCallback(private val moviesRemoteDataSource: MoviesRemoteDataSource,
@@ -13,7 +14,7 @@ class PageListMovieBoundaryCallback(private val moviesRemoteDataSource: MoviesRe
 
     private var isRequestRunning = false
     private var requestedPage = 1
-
+    lateinit var disposable: Disposable
     override fun onZeroItemsLoaded() {
         Log.i(TAG, "onZeroItemsLoaded")
         fetchAndStoreMovies()
@@ -26,9 +27,8 @@ class PageListMovieBoundaryCallback(private val moviesRemoteDataSource: MoviesRe
 
     private fun fetchAndStoreMovies() {
         if (isRequestRunning) return
-
         isRequestRunning = true
-       val disposable = moviesRemoteDataSource.fetchMovies(requestedPage)
+        disposable = moviesRemoteDataSource.fetchMovies(requestedPage)
                 .map { movieApiList -> movieApiList.map { it.toMovieEntity() } }
                 .doOnSuccess { listMovie ->
                     if (listMovie.isNotEmpty()) {

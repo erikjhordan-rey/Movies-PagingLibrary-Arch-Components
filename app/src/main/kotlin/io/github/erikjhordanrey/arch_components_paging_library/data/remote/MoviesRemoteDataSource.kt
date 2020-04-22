@@ -1,4 +1,4 @@
-package io.github.erikcaffrey.arch_components_paging_library.data.remote
+package io.github.erikjhordanrey.arch_components_paging_library.data.remote
 
 class MoviesRemoteDataSource(private val moviesService: MoviesService) {
 

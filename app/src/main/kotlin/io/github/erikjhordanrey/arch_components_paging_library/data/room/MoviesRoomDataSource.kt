@@ -1,4 +1,4 @@
-package io.github.erikcaffrey.arch_components_paging_library.data.room
+package io.github.erikjhordanrey.arch_components_paging_library.data.room
 
 class MoviesRoomDataSource(private val moviesDao: MoviesDao) {
 

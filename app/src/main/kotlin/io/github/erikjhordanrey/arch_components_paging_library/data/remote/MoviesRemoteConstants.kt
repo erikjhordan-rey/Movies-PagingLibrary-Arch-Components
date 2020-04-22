@@ -1,4 +1,4 @@
-package io.github.erikcaffrey.arch_components_paging_library.data.remote
+package io.github.erikjhordanrey.arch_components_paging_library.data.remote
 
 object Api {
     const val THE_MOVIE_URL = "https://api.themoviedb.org/3/"

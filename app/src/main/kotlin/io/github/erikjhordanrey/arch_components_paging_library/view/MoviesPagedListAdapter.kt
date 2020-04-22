@@ -1,11 +1,11 @@
-package io.github.erikcaffrey.arch_components_paging_library.view
+package io.github.erikjhordanrey.arch_components_paging_library.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
-import io.github.erikcaffrey.arch_components_paging_library.R
-import io.github.erikcaffrey.arch_components_paging_library.data.room.Movie
+import io.github.erikjhordanrey.arch_components_paging_library.R
+import io.github.erikjhordanrey.arch_components_paging_library.data.room.Movie
 
 class MoviesPagedListAdapter : PagedListAdapter<Movie, MoviesViewHolder>(movieDiffCallback) {
 

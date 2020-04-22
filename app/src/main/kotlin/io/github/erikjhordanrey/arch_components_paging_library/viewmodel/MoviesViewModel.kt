@@ -1,11 +1,10 @@
-package io.github.erikcaffrey.arch_components_paging_library.viewmodel
+package io.github.erikjhordanrey.arch_components_paging_library.viewmodel
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.paging.PagedList
-import io.github.erikcaffrey.arch_components_paging_library.data.repository.MoviesRepository
-import io.github.erikcaffrey.arch_components_paging_library.data.room.Movie
+import io.github.erikjhordanrey.arch_components_paging_library.data.repository.MoviesRepository
+import io.github.erikjhordanrey.arch_components_paging_library.data.room.Movie
 import io.reactivex.disposables.CompositeDisposable
 
 class MoviesViewModel(private val moviesRepository: MoviesRepository) : ViewModel() {
@@ -20,6 +19,7 @@ class MoviesViewModel(private val moviesRepository: MoviesRepository) : ViewMode
 
     override fun onCleared() {
         super.onCleared()
+        compositeDisposable.add(moviesRepository.disposable())
         compositeDisposable.dispose()
     }
 }
