@@ -40,7 +40,7 @@ class MoviesActivity : AppCompatActivity() {
     }
 
     private fun initObserver() {
-        moviesViewModel.pagedListMovie.observe(this, Observer<PagedList<Movie>> {
+        moviesViewModel.pagedListMovie.observe(this, Observer {
             Log.d(MoviesActivity::class::java.name, "Movies: ${it?.size}")
             moviePagedListAdapter.submitList(it)
         })
