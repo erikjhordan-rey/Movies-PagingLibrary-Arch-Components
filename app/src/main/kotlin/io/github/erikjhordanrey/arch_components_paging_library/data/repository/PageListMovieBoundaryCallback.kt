@@ -14,7 +14,8 @@ class PageListMovieBoundaryCallback(private val moviesRemoteDataSource: MoviesRe
 
     private var isRequestRunning = false
     private var requestedPage = 1
-    lateinit var disposable: Disposable
+    var disposable: Disposable? = null
+
     override fun onZeroItemsLoaded() {
         Log.i(TAG, "onZeroItemsLoaded")
         fetchAndStoreMovies()

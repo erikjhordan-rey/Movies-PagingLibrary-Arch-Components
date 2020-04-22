@@ -19,7 +19,7 @@ class MoviesViewModel(private val moviesRepository: MoviesRepository) : ViewMode
 
     override fun onCleared() {
         super.onCleared()
-        compositeDisposable.add(moviesRepository.disposable())
+        moviesRepository.disposable()?.run { compositeDisposable.add(this) }
         compositeDisposable.dispose()
     }
 }
