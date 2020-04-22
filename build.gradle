@@ -10,7 +10,7 @@ buildscript {
             'androidxAppcompat': '1.1.0',
             'lifecycle'        : '2.2.0',
             'persistence'      : '2.2.5',
-            'paging'           : '2.1.0',
+            'paging'           : '2.1.2',
             'retrofit'         : '2.5.0',
             'okhttp'           : '3.12.0',
             'glide'            : '4.11.0',
